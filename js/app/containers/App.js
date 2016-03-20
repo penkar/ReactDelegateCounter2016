@@ -1,15 +1,20 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import Header from '../components/header/header.js';
+import Delegate from '../components/delegate/delegate.js';
 
 class App extends React.Component{
 	constructor(props) {
     super(props);
   }
 
-	render() { console.log(this.props);
+	render() {
 		return (
 			<div>
-        APP
+				<Header />
+        <div style={{margin:'10px'}}>
+					<Delegate props={this.props}/>
+        </div>
 			</div>
 		)
 	}
