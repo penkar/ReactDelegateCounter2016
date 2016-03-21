@@ -1,10 +1,4 @@
-let origin = {
-  lengths: 0,
-  letters: 0,
-  numbers: 0,
-  specials: [],
-  capitals: 0
-}
+let origin = {}
 
 const democratDelegates = (state = origin, action) => {
   switch (action.type) {
