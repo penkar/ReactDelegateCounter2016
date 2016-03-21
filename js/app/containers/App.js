@@ -1,5 +1,4 @@
 import React from 'react';
-import { connect } from 'react-redux';
 import Header from '../components/header/header.js';
 import Delegate from '../components/delegate/delegate.js';
 
@@ -26,4 +25,4 @@ function mapStateToProps(state){
 	})
 }
 
-export default connect(mapStateToProps)(App);
+export default App;
