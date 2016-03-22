@@ -5,7 +5,7 @@ import StateRow from './staterow.js';
 class Democrat extends React.Component{
   constructor(props){
     super(props)
-    this.state = {sort:'state', reverse: false}
+    this.state = {sort:'date', reverse: false}
   }
 
   _sort(e) {
@@ -22,7 +22,6 @@ class Democrat extends React.Component{
     keys = keys.map(x => {
       return states[x]
     })
-    window.aaa = keys;
     keys = keys.sort((x,y) => {
       if(this.state.reverse){
         let c = x; x = y; y = c;
@@ -53,9 +52,16 @@ class Democrat extends React.Component{
     const array = [], states = ::this._sorter();
     for( let val in states){
       let state = states[val];
-      array.push(<StateRow data={state} key={state.state}/>)
+      array.push(<StateRow data={state} key={state.state} dispatch={this.props.dispatch} settings={this.props.settings}/>)
     }
     return array;
+  }
+
+  _thState(id) {
+    if(id === this.state.sort){
+      return {backgroundColor:'#33A703'}
+    }
+    return {}
   }
 
   render() {
@@ -63,14 +69,14 @@ class Democrat extends React.Component{
       <div>
         <table className="pure-table" style={{margin:'auto'}}>
           <thead>
-            <tr>
-              <th id='state' onClick={::this._sort}>State</th>
-              <th id='date' onClick={::this._sort}>Date</th>
-              <th id='delegates' onClick={::this._sort}>Delegates</th>
-              <th id='superdelegates' onClick={::this._sort}>Super Delegates</th>
-              <th id='open' onClick={::this._sort}>Open / Closed</th>
-              <th id='clinton' onClick={::this._sort}>Clinton</th>
-              <th id='sanders' onClick={::this._sort}>Sanders</th>
+            <tr style={{cursor:'pointer'}}>
+              <th style={::this._thState('state')} id='state' onClick={::this._sort}>State</th>
+              <th style={::this._thState('date')}  id='date' onClick={::this._sort}>Date</th>
+              <th style={::this._thState('delegates')}  id='delegates' onClick={::this._sort}>Delegates</th>
+              <th style={::this._thState('superdelegates')}  id='superdelegates' onClick={::this._sort}>Super Delegates</th>
+              <th style={::this._thState('open')}  id='open' onClick={::this._sort}>Open / Closed</th>
+              <th style={::this._thState('clinton')}  id='clinton' onClick={::this._sort}>Clinton</th>
+              <th style={::this._thState('sanders')}  id='sanders' onClick={::this._sort}>Sanders</th>
             </tr>
           </thead>
           <tbody>
@@ -85,7 +91,7 @@ class Democrat extends React.Component{
 function mapStateToProps(state){
 	return ({
 		delegates: state.blueStateDelegates,
-    candidates: state.democratDelegates
+    settings: state.settings
 	})
 }
 
