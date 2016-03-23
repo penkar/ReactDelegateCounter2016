@@ -1,4 +1,5 @@
 import React, {PropTypes} from 'react'
+import { connect } from 'react-redux'
 
 class Switch extends React.Component{
   static propTypes = {
@@ -49,4 +50,4 @@ class Switch extends React.Component{
   }
 }
 
-export default Switch
+export default connect()(Switch);

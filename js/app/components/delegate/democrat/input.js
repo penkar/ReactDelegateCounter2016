@@ -1,12 +1,13 @@
 import React from 'react'
 
 class input extends React.Component{
-  componentDidMount() {
-
+  constructor(props){
+    super(props)
   }
 
-  componentWillUnmount() {
-
+  _end() {
+    const {dispatch} = this.props
+    dispatch({type:'CANCEL_EDIT'})
   }
 
   _change(e) {

@@ -17,7 +17,6 @@ class StateRow extends React.Component{
   _update(candidate, vote) {
     let state = this.props.data.state;
     this.props.dispatch({type:'SET_EDIT', state, candidate})
-    // this.props.dispatch({type:'SET_DELEGATE', state, candidate, vote})
   }
 
   _clintonInput(data, settings, dispatch) {
@@ -34,11 +33,19 @@ class StateRow extends React.Component{
     return data.candidates.sanders
   }
 
+  _delegateAdd(data) {
+    if(data.delegates < (data.candidates.clinton + data.candidates.sanders)){
+      return {backgroundColor:'rgba(255,0,0,0.49)'};
+    } else {
+      return {};
+    }
+  }
+
   render() {
     let { data, settings, dispatch } = this.props
     let candidates = data.candidates;
     return (
-      <tr>
+      <tr style={::this._delegateAdd(data)}>
         <td>{data.state}</td>
         <td>{data.date.toLocaleDateString()}</td>
         <td>{data.delegates}</td>

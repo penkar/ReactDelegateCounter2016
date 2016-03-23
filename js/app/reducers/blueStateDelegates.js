@@ -464,8 +464,6 @@ const blueStateDelegates = (state = origin, action) => {
       let newstate = state[action.state]
       newstate.candidates[action.candidate] = action.vote
       return {...state, [action.state]:newstate}
-    case 'RESET_DELEGATE':
-      return {origin}
     default:
       return state
   }
