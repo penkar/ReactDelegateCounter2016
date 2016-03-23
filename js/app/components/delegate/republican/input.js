@@ -13,7 +13,7 @@ class input extends React.Component{
   _change(e) {
     const { dispatch, state, candidate } = this.props;
     let vote = parseInt(e.target.value) || 0;
-    dispatch({type:'SET_DELEGATE_DEMOCRAT', candidate, state, vote})
+    dispatch({type:'SET_DELEGATE_REPUBLICAN', candidate, state, vote})
   }
 
   render() {

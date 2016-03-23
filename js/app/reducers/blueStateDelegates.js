@@ -460,7 +460,7 @@ let origin = {
 
 const blueStateDelegates = (state = origin, action) => {
   switch (action.type) {
-    case 'SET_DELEGATE':
+    case 'SET_DELEGATE_DEMOCRAT':
       let newstate = state[action.state]
       newstate.candidates[action.candidate] = action.vote
       return {...state, [action.state]:newstate}
