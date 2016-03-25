@@ -56,10 +56,14 @@ class StateRow extends React.Component{
   }
 
   _delegateAdd(data) {
-    if(data.delegates < (data.candidates.clinton + data.candidates.sanders)){
+    let total = data.candidates.trump + data.candidates.kasich + data.candidates.rubio + data.candidates.cruz;
+    let delegates = data.delegates;
+    if(!total || (total === delegates)){
+      return {}
+    } else if(delegates < total){
       return {backgroundColor:'rgba(255,0,0,0.49)'};
     } else {
-      return {};
+      return {backgroundColor: 'rgba(0, 86, 255, 0.3)'}
     }
   }
 
