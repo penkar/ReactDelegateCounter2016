@@ -64,6 +64,15 @@ class Democrat extends React.Component{
     return {}
   }
 
+  _headers() {
+    const contenders = [['clinton','Clinton'],['sanders','Sanders']]
+    let array = contenders.map( (candidate, x) => {
+      let lower = candidate[0]
+      return <th key={x} style={::this._thState(lower)}  id={lower} onClick={::this._sort}>{candidate[1]}</th>
+    })
+    return array
+  }
+
   render() {
     return (
       <div>
@@ -75,8 +84,7 @@ class Democrat extends React.Component{
               <th style={::this._thState('delegates')}  id='delegates' onClick={::this._sort}>Delegates</th>
               <th style={::this._thState('superdelegates')}  id='superdelegates' onClick={::this._sort}>Super Delegates</th>
               <th style={::this._thState('open')}  id='open' onClick={::this._sort}>Open / Closed</th>
-              <th style={::this._thState('clinton')}  id='clinton' onClick={::this._sort}>Clinton</th>
-              <th style={::this._thState('sanders')}  id='sanders' onClick={::this._sort}>Sanders</th>
+              {::this._headers()}
             </tr>
           </thead>
           <tbody>

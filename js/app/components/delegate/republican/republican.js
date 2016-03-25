@@ -66,7 +66,16 @@ class Repulican extends React.Component{
     return {}
   }
 
-  render() {console.log(this.props.delegates)
+  _headers() {
+    const contenders = [['trump','Trump'],['rubio','Rubio'],['cruz','Cruz'],['kasich','Kasich']]
+    let array = contenders.map( (candidate, x) => {
+      let lower = candidate[0]
+      return <th key={x} style={::this._thState(lower)}  id={lower} onClick={::this._sort}>{candidate[1]}</th>
+    })
+    return array
+  }
+
+  render() {
     return (
       <div>
         <table className="pure-table" style={{margin:'auto'}}>
@@ -76,10 +85,7 @@ class Repulican extends React.Component{
               <th style={::this._thState('date')}  id='date' onClick={::this._sort}>Date</th>
               <th style={::this._thState('delegates')}  id='delegates' onClick={::this._sort}>Delegates</th>
               <th style={::this._thState('open')}  id='open' onClick={::this._sort}>Open / Closed</th>
-              <th style={::this._thState('trump')}  id='trump' onClick={::this._sort}>Trump</th>
-              <th style={::this._thState('rubio')}  id='rubio' onClick={::this._sort}>Rubio</th>
-              <th style={::this._thState('cruz')}  id='cruz' onClick={::this._sort}>Cruz</th>
-              <th style={::this._thState('kasich')}  id='kasich' onClick={::this._sort}>Kasich</th>
+              {::this._headers()}
             </tr>
           </thead>
           <tbody>
