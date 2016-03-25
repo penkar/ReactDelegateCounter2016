@@ -1,7 +1,7 @@
 let origin = {
   edit: false,
   state: false,
-  candidate: false  
+  candidate: false
 }
 
 const settings = (state = origin, action) => {
@@ -9,7 +9,7 @@ const settings = (state = origin, action) => {
     case 'SET_EDIT':
       return {...state, edit:true, state:action.state, candidate:action.candidate}
     case 'CANCEL_EDIT':
-      return origin;
+      return {edit:false, state:false, candidate:false};
     default:
       return state
   }

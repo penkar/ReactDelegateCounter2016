@@ -2,6 +2,7 @@ import React from 'react';
 import Democrat from './democrat/democrat.js'
 import Republican from './republican/republican.js'
 import Switch from './switches/switch.js'
+import { connect } from 'react-redux'
 
 class Delegate extends React.Component{
   constructor(props){
@@ -9,6 +10,19 @@ class Delegate extends React.Component{
     this.state = {
       democrat: true
     }
+  }
+
+  _escape(e){
+    const {dispatch} = this.props;
+    let key = e.keyCode;
+    if(key === 27 || key === 13){
+      return dispatch({type:'CANCEL_EDIT'})
+    }
+    return null;
+  }
+
+  componentDidMount() {
+    document.addEventListener('keyup', ::this._escape)
   }
 
   _switch(bool) {
@@ -33,4 +47,10 @@ class Delegate extends React.Component{
   }
 }
 
-export default Delegate
+function mapStateToProps(state){
+	return ({
+    settings: state.settings
+	})
+}
+
+export default connect(mapStateToProps)(Delegate)
