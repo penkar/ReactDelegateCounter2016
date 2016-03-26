@@ -9,8 +9,7 @@ class Header extends React.Component{
     return (
       <div className="header" style={{backgroundColor:'#2d3e50', height:'50px'}}>
         <div className="pure-menu pure-menu-horizontal pure-menu-fixed">
-          <span className="pure-menu-heading">Delegate Count</span>
-
+          <span className="pure-menu-heading">2016 Delegate Count</span>
         </div>
       </div>
     )
