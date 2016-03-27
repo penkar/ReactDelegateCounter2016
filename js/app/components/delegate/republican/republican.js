@@ -26,7 +26,9 @@ class Repulican extends React.Component{
         contenders:[['trump','Trump'],['rubio','Rubio'],['kasich','Kasich'],['cruz','Cruz'],['bush','Bush'],['carson','Carson'],['fiorina','Fiorina'],['huckabee','Huckabee'],['christie','Christie'],['santorum','Santorum'],['gilmore','Gilmore']]
       })
     } else {
-      return this.setState({contenders:[['trump','Trump'],['rubio','Rubio'],['kasich','Kasich'],['cruz','Cruz']]})
+      return this.setState({
+        contenders:[['trump','Trump'],['rubio','Rubio'],['kasich','Kasich'],['cruz','Cruz']]
+      })
     }
   }
 
@@ -89,6 +91,24 @@ class Repulican extends React.Component{
     return array
   }
 
+  _total() {
+    const contenders = this.state.contenders
+    const total = {trump: 0, rubio:0,kasich:0,cruz:0,bush:0,carson:0,fiorina:0,huckabee:0,christie:0,santorum:0,gilmore:0}
+
+    let delegates = this.props.delegates
+    for(var state in delegates){
+      for( var can in total){
+        total[can] += delegates[state].candidates[can];
+      }
+    }
+    let array = [<td key='0'>Totals:</td>,<td key='1'></td>,<td key='2'></td>,<td key='3'></td>];
+    for(var i = 0; i < contenders.length; i++){
+      let contender = contenders[i][0]
+      array.push(<td key={contender}>{total[contender]}</td>)
+    }
+    return (<tr>{array}</tr>)
+  }
+
   render() {
     return (
       <div>
@@ -106,6 +126,7 @@ class Repulican extends React.Component{
             </tr>
           </thead>
           <tbody>
+            {::this._total()}
             {::this._rows()}
           </tbody>
         </table>
