@@ -8,15 +8,15 @@ class Repulican extends React.Component{
     this.state = {
       sort:'date',
       reverse: false,
-      contenders: [['trump','Trump'],['rubio','Rubio'],['kasich','Kasich'],['cruz','Cruz']]
+      contenders: [['trump','Trump'],['kasich','Kasich'],['cruz','Cruz']]
     }
   }
 
   _expander() {
     if(this.state.contenders.length < 5){
-      return <span style={{float:'right'}} onClick={::this._expand}>More</span>
+      return <button style={{fontSize:'70%'}} className={'pure-button'} onClick={::this._expand}>More</button>
     } else {
-      return <span style={{float:'right'}} onClick={::this._expand}>Less</span>
+      return <button style={{fontSize:'70%'}} className={'pure-button'} onClick={::this._expand}>Less</button>
     }
   }
 

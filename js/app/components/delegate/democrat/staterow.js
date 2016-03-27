@@ -55,8 +55,8 @@ class StateRow extends React.Component{
         <td>{data.delegates}</td>
         <td>{data.superdelegates}</td>
         <td>{data.class}</td>
-        <td onClick={::this._clinton}>{::this._clintonInput(data, settings, dispatch)}</td>
-        <td onClick={::this._sanders}>{::this._sandersInput(data, settings, dispatch)}</td>
+        <td style={{cursor:'pointer'}} onClick={::this._clinton}>{::this._clintonInput(data, settings, dispatch)}</td>
+        <td style={{cursor:'pointer'}} onClick={::this._sanders}>{::this._sandersInput(data, settings, dispatch)}</td>
       </tr>
     )
   }

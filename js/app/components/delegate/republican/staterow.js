@@ -66,7 +66,7 @@ class StateRow extends React.Component{
         );
       } else {
         array.push(
-          <td key={contender} id={contender} onClick={::this._update}>
+          <td key={contender} id={contender} onClick={::this._update} style={{cursor:'pointer'}}>
             {data.candidates[contender]}
           </td>
         );
