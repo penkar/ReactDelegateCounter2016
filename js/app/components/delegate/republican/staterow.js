@@ -7,7 +7,6 @@ class StateRow extends React.Component{
   }
 
   _update(e) {
-    let vote = e.target.value
     let candidate = e.target.id
     let state = this.props.data.state;
     this.props.dispatch({type:'SET_EDIT', state, candidate})

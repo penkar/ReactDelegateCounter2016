@@ -6,31 +6,10 @@ class StateRow extends React.Component{
     super(props)
   }
 
-  _sanders(e) {
-    ::this._update('sanders', e.target.value)
-  }
-
-  _clinton(e) {
-    ::this._update('clinton', e.target.value)
-  }
-
-  _update(candidate, vote) {
+  _update(e) {
+    let candidate = e.target.id
     let state = this.props.data.state;
     this.props.dispatch({type:'SET_EDIT', state, candidate})
-  }
-
-  _clintonInput(data, settings, dispatch) {
-    if(data.state === settings.state && settings.candidate === 'clinton'){
-      return <Input count={data.candidates.clinton} dispatch={dispatch} candidate='clinton' state={data.state}/>
-    }
-    return data.candidates.clinton
-  }
-
-  _sandersInput(data, settings, dispatch) {
-    if(data.state === settings.state && settings.candidate === 'sanders'){
-      return <Input count={data.candidates.sanders} dispatch={dispatch} candidate='sanders' state={data.state}/>
-    }
-    return data.candidates.sanders
   }
 
   _delegateAdd(data) {
@@ -45,6 +24,29 @@ class StateRow extends React.Component{
     }
   }
 
+  _cols() {
+    let array = [];
+    const contenders = ['clinton', 'sanders']
+    let { data, settings, dispatch } = this.props;
+    for(var i = 0; i < contenders.length; i++){
+      let contender = contenders[i];
+      if( data.state === settings.state && settings.candidate === contender ){
+        array.push(
+          <td key={contender}>
+            <Input count={data.candidates[contender]} dispatch={dispatch} candidate={contender} state={data.state}/>
+          </td>
+        );
+      } else {
+        array.push(
+          <td key={contender} id={contender} onClick={::this._update} style={{cursor:'pointer'}}>
+            {data.candidates[contender]}
+          </td>
+        );
+      }
+    }
+    return array
+  }
+
   render() {
     let { data, settings, dispatch } = this.props
     let candidates = data.candidates;
@@ -55,8 +57,7 @@ class StateRow extends React.Component{
         <td>{data.delegates}</td>
         <td>{data.superdelegates}</td>
         <td>{data.class}</td>
-        <td style={{cursor:'pointer'}} onClick={::this._clinton}>{::this._clintonInput(data, settings, dispatch)}</td>
-        <td style={{cursor:'pointer'}} onClick={::this._sanders}>{::this._sandersInput(data, settings, dispatch)}</td>
+        {::this._cols()}
       </tr>
     )
   }

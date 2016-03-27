@@ -83,7 +83,7 @@ class Democrat extends React.Component{
     }
     return (
       <tr>
-        <td></td>
+        <td>Totals:</td>
         <td></td>
         <td></td>
         <td></td>
