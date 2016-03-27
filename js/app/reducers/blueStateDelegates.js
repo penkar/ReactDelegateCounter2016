@@ -29,7 +29,7 @@ let origin = {
     delegates: 35,
     superdelegates: 8,
     class: "closed",
-    candidates: {"clinton":19, "sanders":15}
+    candidates: {"clinton":20, "sanders":15}
   },
   "South Carolina": {
     state: "South Carolina",
@@ -77,7 +77,7 @@ let origin = {
     delegates:102,
     superdelegates: 14,
     class: "open",
-    candidates: {"clinton":72, "sanders":28}
+    candidates: {"clinton":73, "sanders":29}
   },
 
   "Massachusetts":{
@@ -94,7 +94,7 @@ let origin = {
     delegates:77,
     superdelegates: 16,
     class: "open",
-    candidates: {"clinton":29, "sanders":46}
+    candidates: {"clinton":31, "sanders":46}
   },
   "Oklahoma":{
     state:"Oklahoma",
@@ -110,7 +110,7 @@ let origin = {
     delegates:67,
     superdelegates: 9,
     class: "open",
-    candidates: {"clinton":42, "sanders":22}
+    candidates: {"clinton":44, "sanders":23}
   },
   "Texas":{
     state:"Texas",
@@ -118,7 +118,7 @@ let origin = {
     delegates:222,
     superdelegates: 30,
     class: "open",
-    candidates: {"clinton":145, "sanders":74}
+    candidates: {"clinton":147, "sanders":75}
   },
   "Vermont":{
     state:"Vermont",
@@ -134,7 +134,7 @@ let origin = {
     delegates:95,
     superdelegates: 15,
     class: "open",
-    candidates: {"clinton":61, "sanders":33}
+    candidates: {"clinton":62, "sanders":33}
   },
   "Louisiana":{
     state:"Louisiana",
@@ -142,7 +142,7 @@ let origin = {
     delegates:51,
     superdelegates: 8,
     class: "closed",
-    candidates: {"clinton":35, "sanders":12}
+    candidates: {"clinton":37, "sanders":14}
   },
   "Nebraska":{
     state:"Nebraska",
@@ -150,7 +150,7 @@ let origin = {
     delegates:25,
     superdelegates: 5,
     class: "closed",
-    candidates: {"clinton":10, "sanders":14}
+    candidates: {"clinton":10, "sanders":15}
   },
   "Kansas":{
     state:"Kansas",
@@ -166,7 +166,7 @@ let origin = {
     delegates:25,
     superdelegates: 5,
     class: "closed",
-    candidates: {"clinton":7, "sanders":15}
+    candidates: {"clinton":9, "sanders":16}
   },
   "Mississippi":{
     state:"Mississippi",
@@ -174,7 +174,7 @@ let origin = {
     delegates:36,
     superdelegates: 5,
     class: "open",
-    candidates: {"clinton":30, "sanders":4}
+    candidates: {"clinton":32, "sanders":4}
   },
   "Michigan":{
     state:"Michigan",
@@ -182,7 +182,7 @@ let origin = {
     delegates:130,
     superdelegates: 17,
     class: "open",
-    candidates: {"clinton":60, "sanders":67}
+    candidates: {"clinton":63, "sanders":67}
   },
   "Northern Marianas":{
     state:"Northern Marianas",
@@ -198,7 +198,7 @@ let origin = {
     delegates:214,
     superdelegates: 32,
     class: "closed",
-    candidates: {"clinton":133, "sanders":65}
+    candidates: {"clinton":141, "sanders":70}
   },
   "Illinois":{
     state:"Illinois",
@@ -206,7 +206,7 @@ let origin = {
     delegates:156,
     superdelegates: 26,
     class: "open",
-    candidates: {"clinton":68, "sanders":67}
+    candidates: {"clinton":76, "sanders":73}
   },
   "Missouri":{
     state:"Missouri",
@@ -214,7 +214,7 @@ let origin = {
     delegates:71,
     superdelegates: 13,
     class: "open",
-    candidates: {"clinton":32, "sanders":32}
+    candidates: {"clinton":34, "sanders":34}
   },
   "North Carolina":{
     state:"North Carolina",
@@ -230,7 +230,7 @@ let origin = {
     delegates:143,
     superdelegates: 16,
     class: "semi-open",
-    candidates: {"clinton":79, "sanders":62}
+    candidates: {"clinton":81, "sanders":62}
   },
   "Arizona":{
     state:"Arizona",
@@ -238,7 +238,7 @@ let origin = {
     delegates:75,
     superdelegates: 10,
     class: "closed",
-    candidates: {"clinton":0, "sanders":0}
+    candidates: {"clinton":44, "sanders":30}
   },
   "Idaho":{
     state:"Idaho",
@@ -246,7 +246,7 @@ let origin = {
     delegates:23,
     superdelegates: 4,
     class: "open",
-    candidates: {"clinton":0, "sanders":0}
+    candidates: {"clinton":5, "sanders":17}
   },
   "Utah":{
     state:"Utah",
@@ -254,7 +254,7 @@ let origin = {
     delegates:33,
     superdelegates: 4,
     class: "semi-open",
-    candidates: {"clinton":0, "sanders":0}
+    candidates: {"clinton":6, "sanders":26}
   },
   "Alaska":{
     state:"Alaska",
@@ -262,7 +262,7 @@ let origin = {
     delegates:16,
     superdelegates: 4,
     class: "closed",
-    candidates: {"clinton":0, "sanders":0}
+    candidates: {"clinton":3, "sanders":13}
   },
   "Hawaii":{
     state:"Hawaii",
@@ -270,7 +270,7 @@ let origin = {
     delegates:25,
     superdelegates: 9,
     class: "semi-closed",
-    candidates: {"clinton":0, "sanders":0}
+    candidates: {"clinton":8, "sanders":17}
   },
   "Washington":{
     state:"Washington",
@@ -278,7 +278,7 @@ let origin = {
     delegates:101,
     superdelegates: 17,
     class: "open",
-    candidates: {"clinton":0, "sanders":0}
+    candidates: {"clinton":9, "sanders":25}
   },
   "Wisconsin":{
     state:"Wisconsin",

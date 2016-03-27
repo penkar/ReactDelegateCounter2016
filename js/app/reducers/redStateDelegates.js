@@ -5,7 +5,7 @@ let origin = {
     class:"Closed",
     delegates:30,
     candidates:{
-      trump:7,cruz:8, rubio:7, kasich:1
+      trump:7,cruz:8,rubio:7,kasich:1,carson:3,paul:1,bush:1,fiorina:1,huckabee:1,christie:0,santorum:0,gilmore:0
     }
   },
   "New Hampshire":{
@@ -14,7 +14,7 @@ let origin = {
     class:"open",
     delegates:23,
     candidates:{
-      trump:11,cruz:3, rubio:2, kasich:4
+      trump:11,cruz:3, rubio:2, kasich:4,carson:0,paul:0,bush:3,fiorina:0,huckabee:0,christie:0,santorum:0,gilmore:0
     }
   },
   "South Carolina":{
@@ -23,7 +23,7 @@ let origin = {
     class:"open",
     delegates:50,
     candidates:{
-      trump:50,cruz:0, rubio:0, kasich:0
+      trump:50,cruz:0, rubio:0, kasich:0,carson:0,paul:0,bush:0,fiorina:0,huckabee:0,christie:0,santorum:0,gilmore:0
     }
   },
   "Nevada":{
@@ -32,7 +32,7 @@ let origin = {
     class:"Closed",
     delegates:30,
     candidates:{
-      trump:14,cruz:6, rubio:7, kasich:1
+      trump:14,cruz:6, rubio:7, kasich:1,carson:0,paul:0,bush:2,fiorina:0,huckabee:0,christie:0,santorum:0,gilmore:0
     }
   },
   "Alabama":{
@@ -41,7 +41,7 @@ let origin = {
     class:"open",
     delegates:50,
     candidates:{
-      trump:36,cruz:13, rubio:1, kasich:0
+      trump:36,cruz:13, rubio:1, kasich:0,carson:0,paul:0,bush:0,fiorina:0,huckabee:0,christie:0,santorum:0,gilmore:0
     }
   },
   "Alaska":{
@@ -50,7 +50,7 @@ let origin = {
     class:"Closed",
     delegates:28,
     candidates:{
-      trump:14,cruz:14, rubio:0, kasich:0
+      trump:14,cruz:14, rubio:0, kasich:0,carson:0,paul:0,bush:0,fiorina:0,huckabee:0,christie:0,santorum:0,gilmore:0
     }
   },
   "Arkansas":{
@@ -59,7 +59,7 @@ let origin = {
     class:"open",
     delegates:40,
     candidates:{
-      trump:16,cruz:15, rubio:9, kasich:0
+      trump:16,cruz:15, rubio:9, kasich:0,carson:0,paul:0,bush:0,fiorina:0,huckabee:0,christie:0,santorum:0,gilmore:0
     }
   },
   "Georgia":{
@@ -68,7 +68,7 @@ let origin = {
     class:"open",
     delegates:76,
     candidates:{
-      trump:42,cruz:18, rubio:16, kasich:0
+      trump:42,cruz:18, rubio:16, kasich:0,carson:0,paul:0,bush:0,fiorina:0,huckabee:0,christie:0,santorum:0,gilmore:0
     }
   },
   "Massachusetts":{
@@ -77,7 +77,7 @@ let origin = {
     class:"open",
     delegates:42,
     candidates:{
-      trump:22,cruz:4, rubio:8, kasich:8
+      trump:22,cruz:4, rubio:8, kasich:8,carson:0,paul:0,bush:0,fiorina:0,huckabee:0,christie:0,santorum:0,gilmore:0
     }
   },
   "Minnesota":{
@@ -86,7 +86,7 @@ let origin = {
     class:"open",
     delegates:38,
     candidates:{
-      trump:8,cruz:13, rubio:17, kasich:0
+      trump:8,cruz:13, rubio:17, kasich:0,carson:0,paul:0,bush:0,fiorina:0,huckabee:0,christie:0,santorum:0,gilmore:0
     }
   },
   "Oklahoma":{
@@ -95,7 +95,7 @@ let origin = {
     class:"Closed",
     delegates:43,
     candidates:{
-      trump:13,cruz:15, rubio:12, kasich:0
+      trump:13,cruz:15, rubio:12, kasich:0,carson:0,paul:0,bush:0,fiorina:0,huckabee:0,christie:0,santorum:0,gilmore:0
     }
   },
   "Tennessee":{
@@ -104,7 +104,7 @@ let origin = {
     class:"open",
     delegates:58,
     candidates:{
-      trump:33,cruz:16, rubio:9, kasich:0
+      trump:33,cruz:16, rubio:9, kasich:0,carson:0,paul:0,bush:0,fiorina:0,huckabee:0,christie:0,santorum:0,gilmore:0
     }
   },
   "Texas":{
@@ -113,7 +113,7 @@ let origin = {
     class:"open",
     delegates:155,
     candidates:{
-      trump:48,cruz:104, rubio:3, kasich:0
+      trump:48,cruz:104, rubio:3, kasich:0,carson:0,paul:0,bush:0,fiorina:0,huckabee:0,christie:0,santorum:0,gilmore:0
     }
   },
   "Vermont":{
@@ -122,7 +122,7 @@ let origin = {
     class:"open",
     delegates:16,
     candidates:{
-      trump:8,cruz:0, rubio:0, kasich:8
+      trump:8,cruz:0, rubio:0, kasich:8,carson:0,paul:0,bush:0,fiorina:0,huckabee:0,christie:0,santorum:0,gilmore:0
     }
   },
   "Virginia":{
@@ -131,16 +131,16 @@ let origin = {
     class:"open",
     delegates:49,
     candidates:{
-      trump:17,cruz:8, rubio:16, kasich:5
+      trump:17,cruz:8, rubio:16, kasich:5,carson:3,paul:0,bush:0,fiorina:0,huckabee:0,christie:0,santorum:0,gilmore:0
     }
   },
-  "Colorado1":{
-    state:"Colorado1",
+  "Colorado":{
+    state:"Colorado",
     date: new Date("March 1, 2016"),
     class:"Closed",
     delegates:37,
     candidates:{
-      trump:0,cruz:0, rubio:0, kasich:0
+      trump:0,cruz:0, rubio:0, kasich:0,carson:0,paul:0,bush:0,fiorina:0,huckabee:0,christie:0,santorum:0,gilmore:0
     }
   },
   "Kansas":{
@@ -149,7 +149,7 @@ let origin = {
     class:"Closed",
     delegates:40,
     candidates:{
-      trump:9,cruz:24, rubio:6, kasich:1
+      trump:9,cruz:24, rubio:6, kasich:1,carson:0,paul:0,bush:0,fiorina:0,huckabee:0,christie:0,santorum:0,gilmore:0
     }
   },
   "Kentucky":{
@@ -158,7 +158,7 @@ let origin = {
     class:"Closed",
     delegates:46,
     candidates:{
-      trump:17,cruz:15, rubio:7, kasich:7
+      trump:17,cruz:15, rubio:7, kasich:7,carson:0,paul:0,bush:0,fiorina:0,huckabee:0,christie:0,santorum:0,gilmore:0
     }
   },
   "Louisiana":{
@@ -167,7 +167,7 @@ let origin = {
     class:"Closed",
     delegates:46,
     candidates:{
-      trump:18,cruz:18, rubio:5, kasich:0
+      trump:18,cruz:18, rubio:5, kasich:0,carson:0,paul:0,bush:0,fiorina:0,huckabee:0,christie:0,santorum:0,gilmore:0
     }
   },
   "Maine":{
@@ -176,7 +176,7 @@ let origin = {
     class:"Closed",
     delegates:23,
     candidates:{
-      trump:9,cruz:12, rubio:0, kasich:2
+      trump:9,cruz:12, rubio:0, kasich:2,carson:0,paul:0,bush:0,fiorina:0,huckabee:0,christie:0,santorum:0,gilmore:0
     }
   },
   "Puerto Rico":{
@@ -185,7 +185,7 @@ let origin = {
     class:"open",
     delegates:23,
     candidates:{
-      trump:0,cruz:0, rubio:23, kasich:0
+      trump:0,cruz:0, rubio:23, kasich:0,carson:0,paul:0,bush:0,fiorina:0,huckabee:0,christie:0,santorum:0,gilmore:0
     }
   },
   "Hawaii":{
@@ -194,7 +194,7 @@ let origin = {
     class:"Closed",
     delegates:19,
     candidates:{
-      trump:11,cruz:7, rubio:1, kasich:0
+      trump:11,cruz:7, rubio:1, kasich:0,carson:0,paul:0,bush:0,fiorina:0,huckabee:0,christie:0,santorum:0,gilmore:0
     }
   },
   "Idaho":{
@@ -203,7 +203,7 @@ let origin = {
     class:"Closed",
     delegates:32,
     candidates:{
-      trump:12,cruz:20, rubio:0, kasich:0
+      trump:12,cruz:20, rubio:0, kasich:0,carson:0,paul:0,bush:0,fiorina:0,huckabee:0,christie:0,santorum:0,gilmore:0
     }
   },
   "Michigan":{
@@ -212,7 +212,7 @@ let origin = {
     class:"open",
     delegates:59,
     candidates:{
-      trump:25,cruz:17, rubio:0, kasich:17
+      trump:25,cruz:17, rubio:0, kasich:17,carson:0,paul:0,bush:0,fiorina:0,huckabee:0,christie:0,santorum:0,gilmore:0
     }
   },
   "Mississippi":{
@@ -221,7 +221,7 @@ let origin = {
     class:"open",
     delegates:40,
     candidates:{
-      trump:24,cruz:13, rubio:0, kasich:0
+      trump:24,cruz:13, rubio:0, kasich:0,carson:0,paul:0,bush:0,fiorina:0,huckabee:0,christie:0,santorum:0,gilmore:0
     }
   },
   "Virgin Islands":{
@@ -230,16 +230,16 @@ let origin = {
     class:"Closed",
     delegates:9,
     candidates:{
-      trump:0,cruz:0, rubio:0, kasich:0
+      trump:0,cruz:0, rubio:0, kasich:0,carson:0,paul:0,bush:0,fiorina:0,huckabee:0,christie:0,santorum:0,gilmore:0
     }
   },
-  "Wyoming1":{
-    state:"Wyoming1",
+  "Wyoming":{
+    state:"Wyoming",
     date: new Date("March 12, 2016"),
     class:"Closed",
     delegates:29,
     candidates:{
-      trump:1,cruz:9, rubio:1, kasich:0
+      trump:1,cruz:9, rubio:1, kasich:0,carson:0,paul:0,bush:0,fiorina:0,huckabee:0,christie:0,santorum:0,gilmore:0
     }
   },
   "Guam":{
@@ -248,7 +248,7 @@ let origin = {
     class:"Closed",
     delegates:9,
     candidates:{
-      trump:0,cruz:1, rubio:0, kasich:0
+      trump:0,cruz:1, rubio:0, kasich:0,carson:0,paul:0,bush:0,fiorina:0,huckabee:0,christie:0,santorum:0,gilmore:0
     }
   },
   "District of Columbia":{
@@ -257,7 +257,7 @@ let origin = {
     class:"Closed",
     delegates:19,
     candidates:{
-      trump:0,cruz:0, rubio:10, kasich:9
+      trump:0,cruz:0, rubio:10, kasich:9,carson:0,paul:0,bush:0,fiorina:0,huckabee:0,christie:0,santorum:0,gilmore:0
     }
   },
   "Florida":{
@@ -266,7 +266,7 @@ let origin = {
     class:"Closed",
     delegates:99,
     candidates:{
-      trump:99,cruz:0, rubio:0, kasich:0
+      trump:99,cruz:0, rubio:0, kasich:0,carson:0,paul:0,bush:0,fiorina:0,huckabee:0,christie:0,santorum:0,gilmore:0,carson:0,paul:0,bush:0,fiorina:0,huckabee:0,christie:0,santorum:0,gilmore:0
     }
   },
   "Illinois":{
@@ -275,7 +275,7 @@ let origin = {
     class:"open",
     delegates:69,
     candidates:{
-      trump:53,cruz:9, rubio:0, kasich:5
+      trump:53,cruz:9, rubio:0, kasich:5,carson:0,paul:0,bush:0,fiorina:0,huckabee:0,christie:0,santorum:0,gilmore:0
     }
   },
   "Missouri":{
@@ -284,7 +284,7 @@ let origin = {
     class:"open",
     delegates:52,
     candidates:{
-      trump:25,cruz:15, rubio:0, kasich:0
+      trump:25,cruz:15, rubio:0, kasich:0,carson:0,paul:0,bush:0,fiorina:0,huckabee:0,christie:0,santorum:0,gilmore:0,carson:0,paul:0,bush:0,fiorina:0,huckabee:0,christie:0,santorum:0,gilmore:0
     }
   },
   "North Carolina":{
@@ -293,7 +293,7 @@ let origin = {
     class:"open",
     delegates:72,
     candidates:{
-      trump:29,cruz:27, rubio:6, kasich:9
+      trump:29,cruz:27, rubio:6, kasich:9,carson:0,paul:0,bush:0,fiorina:0,huckabee:0,christie:0,santorum:0,gilmore:0
     }
   },
   "Northern Marianas":{
@@ -302,7 +302,7 @@ let origin = {
     class:"Closed",
     delegates:9,
     candidates:{
-      trump:9,cruz:0, rubio:0, kasich:0
+      trump:9,cruz:0, rubio:0, kasich:0,carson:0,paul:0,bush:0,fiorina:0,huckabee:0,christie:0,santorum:0,gilmore:0
     }
   },
   "Ohio":{
@@ -311,7 +311,7 @@ let origin = {
     class:"open",
     delegates:66,
     candidates:{
-      trump:0,cruz:0, rubio:0, kasich:66
+      trump:0,cruz:0, rubio:0, kasich:66,carson:0,paul:0,bush:0,fiorina:0,huckabee:0,christie:0,santorum:0,gilmore:0
     }
   },
   "American Samoa":{
@@ -320,7 +320,7 @@ let origin = {
     class:"open",
     delegates:9,
     candidates:{
-      trump:1,cruz:1, rubio:0, kasich:0
+      trump:1,cruz:1, rubio:0, kasich:0,carson:0,paul:0,bush:0,fiorina:0,huckabee:0,christie:0,santorum:0,gilmore:0
     }
   },
   "Arizona":{
@@ -329,7 +329,7 @@ let origin = {
     class:"Closed",
     delegates:58,
     candidates:{
-      trump:0,cruz:0, rubio:0, kasich:0
+      trump:58,cruz:0, rubio:0, kasich:0,carson:0,paul:0,bush:0,fiorina:0,huckabee:0,christie:0,santorum:0,gilmore:0
     }
   },
   "Utah":{
@@ -338,7 +338,7 @@ let origin = {
     class:"Closed",
     delegates:40,
     candidates:{
-      trump:0,cruz:0, rubio:0, kasich:0
+      trump:0,cruz:40, rubio:0, kasich:0,carson:0,paul:0,bush:0,fiorina:0,huckabee:0,christie:0,santorum:0,gilmore:0
     }
   },
   "North Dakota":{
@@ -347,7 +347,7 @@ let origin = {
     class:"Closed",
     delegates:28,
     candidates:{
-      trump:0,cruz:0, rubio:0, kasich:0
+      trump:0,cruz:0, rubio:0, kasich:0,carson:0,paul:0,bush:0,fiorina:0,huckabee:0,christie:0,santorum:0,gilmore:0,carson:0,paul:0,bush:0,fiorina:0,huckabee:0,christie:0,santorum:0,gilmore:0
     }
   },
   "Wisconsin":{
@@ -356,7 +356,7 @@ let origin = {
     class:"open",
     delegates:42,
     candidates:{
-      trump:0,cruz:0, rubio:0, kasich:0
+      trump:0,cruz:0, rubio:0, kasich:0,carson:0,paul:0,bush:0,fiorina:0,huckabee:0,christie:0,santorum:0,gilmore:0
     }
   },
   "New York":{
@@ -365,7 +365,7 @@ let origin = {
     class:"Closed",
     delegates:95,
     candidates:{
-      trump:0,cruz:0, rubio:0, kasich:0
+      trump:0,cruz:0, rubio:0, kasich:0,carson:0,paul:0,bush:0,fiorina:0,huckabee:0,christie:0,santorum:0,gilmore:0
     }
   },
   "Connecticut":{
@@ -374,7 +374,7 @@ let origin = {
     class:"Closed",
     delegates:28,
     candidates:{
-      trump:0,cruz:0, rubio:0, kasich:0
+      trump:0,cruz:0, rubio:0, kasich:0,carson:0,paul:0,bush:0,fiorina:0,huckabee:0,christie:0,santorum:0,gilmore:0
     }
   },
   "Delaware":{
@@ -383,7 +383,7 @@ let origin = {
     class:"Closed",
     delegates:16,
     candidates:{
-      trump:0,cruz:0, rubio:0, kasich:0
+      trump:0,cruz:0, rubio:0, kasich:0,carson:0,paul:0,bush:0,fiorina:0,huckabee:0,christie:0,santorum:0,gilmore:0,carson:0,paul:0,bush:0,fiorina:0,huckabee:0,christie:0,santorum:0,gilmore:0
     }
   },
   "Maryland":{
@@ -392,7 +392,7 @@ let origin = {
     class:"Closed",
     delegates:38,
     candidates:{
-      trump:0,cruz:0, rubio:0, kasich:0
+      trump:0,cruz:0, rubio:0, kasich:0,carson:0,paul:0,bush:0,fiorina:0,huckabee:0,christie:0,santorum:0,gilmore:0
     }
   },
   "Pennsylvania":{
@@ -401,7 +401,7 @@ let origin = {
     class:"Closed",
     delegates:71,
     candidates:{
-      trump:0,cruz:0, rubio:0, kasich:0
+      trump:0,cruz:0, rubio:0, kasich:0,carson:0,paul:0,bush:0,fiorina:0,huckabee:0,christie:0,santorum:0,gilmore:0,carson:0,paul:0,bush:0,fiorina:0,huckabee:0,christie:0,santorum:0,gilmore:0
     }
   },
   "Rhode Island":{
@@ -410,7 +410,7 @@ let origin = {
     class:"open",
     delegates:19,
     candidates:{
-      trump:0,cruz:0, rubio:0, kasich:0
+      trump:0,cruz:0, rubio:0, kasich:0,carson:0,paul:0,bush:0,fiorina:0,huckabee:0,christie:0,santorum:0,gilmore:0
     }
   },
   "Indiana":{
@@ -419,7 +419,7 @@ let origin = {
     class:"open",
     delegates:57,
     candidates:{
-      trump:0,cruz:0, rubio:0, kasich:0
+      trump:0,cruz:0, rubio:0, kasich:0,carson:0,paul:0,bush:0,fiorina:0,huckabee:0,christie:0,santorum:0,gilmore:0,carson:0,paul:0,bush:0,fiorina:0,huckabee:0,christie:0,santorum:0,gilmore:0
     }
   },
   "Nebraska":{
@@ -428,7 +428,7 @@ let origin = {
     class:"Closed",
     delegates:36,
     candidates:{
-      trump:0,cruz:0, rubio:0, kasich:0
+      trump:0,cruz:0, rubio:0, kasich:0,carson:0,paul:0,bush:0,fiorina:0,huckabee:0,christie:0,santorum:0,gilmore:0
     }
   },
   "West Virginia":{
@@ -437,7 +437,7 @@ let origin = {
     class:"open",
     delegates:34,
     candidates:{
-      trump:0,cruz:0, rubio:0, kasich:0
+      trump:0,cruz:0, rubio:0, kasich:0,carson:0,paul:0,bush:0,fiorina:0,huckabee:0,christie:0,santorum:0,gilmore:0,carson:0,paul:0,bush:0,fiorina:0,huckabee:0,christie:0,santorum:0,gilmore:0
     }
   },
   "Oregon":{
@@ -446,7 +446,7 @@ let origin = {
     class:"Closed",
     delegates:28,
     candidates:{
-      trump:0,cruz:0, rubio:0, kasich:0
+      trump:0,cruz:0, rubio:0, kasich:0,carson:0,paul:0,bush:0,fiorina:0,huckabee:0,christie:0,santorum:0,gilmore:0
     }
   },
   "Washington":{
@@ -455,7 +455,7 @@ let origin = {
     class:"Closed",
     delegates:44,
     candidates:{
-      trump:0,cruz:0, rubio:0, kasich:0
+      trump:0,cruz:0, rubio:0, kasich:0,carson:0,paul:0,bush:0,fiorina:0,huckabee:0,christie:0,santorum:0,gilmore:0,carson:0,paul:0,bush:0,fiorina:0,huckabee:0,christie:0,santorum:0,gilmore:0
     }
   },
   "California":{
@@ -464,7 +464,7 @@ let origin = {
     class:"Closed",
     delegates:172,
     candidates:{
-      trump:0,cruz:0, rubio:0, kasich:0
+      trump:0,cruz:0, rubio:0, kasich:0,carson:0,paul:0,bush:0,fiorina:0,huckabee:0,christie:0,santorum:0,gilmore:0
     }
   },
   "Montana":{
@@ -473,7 +473,7 @@ let origin = {
     class:"open",
     delegates:27,
     candidates:{
-      trump:0,cruz:0, rubio:0, kasich:0
+      trump:0,cruz:0, rubio:0, kasich:0,carson:0,paul:0,bush:0,fiorina:0,huckabee:0,christie:0,santorum:0,gilmore:0,carson:0,paul:0,bush:0,fiorina:0,huckabee:0,christie:0,santorum:0,gilmore:0
     }
   },
   "New Jersey":{
@@ -482,7 +482,7 @@ let origin = {
     class:"open",
     delegates:51,
     candidates:{
-      trump:0,cruz:0, rubio:0, kasich:0
+      trump:0,cruz:0, rubio:0, kasich:0,carson:0,paul:0,bush:0,fiorina:0,huckabee:0,christie:0,santorum:0,gilmore:0
     }
   },
   "New Mexico":{
@@ -491,7 +491,7 @@ let origin = {
     class:"Closed",
     delegates:24,
     candidates:{
-      trump:0,cruz:0, rubio:0, kasich:0
+      trump:0,cruz:0, rubio:0, kasich:0,carson:0,paul:0,bush:0,fiorina:0,huckabee:0,christie:0,santorum:0,gilmore:0
     }
   },
   "South Dakota":{
@@ -500,7 +500,7 @@ let origin = {
     class:"Closed",
     delegates:29,
     candidates:{
-      trump:0,cruz:0, rubio:0, kasich:0
+      trump:0,cruz:0, rubio:0, kasich:0,carson:0,paul:0,bush:0,fiorina:0,huckabee:0,christie:0,santorum:0,gilmore:0
     }
   }
 }
