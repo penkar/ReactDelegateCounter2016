@@ -5,7 +5,7 @@ import StateRow from './staterow.js';
 class Democrat extends React.Component{
   constructor(props){
     super(props)
-    this.state = {sort:'date', reverse: false}
+    this.state = {sort:'date', reverse: false, contenders:[['clinton','Clinton'],['sanders','Sanders']]}
   }
 
   _sort(e) {
@@ -65,12 +65,33 @@ class Democrat extends React.Component{
   }
 
   _headers() {
-    const contenders = [['clinton','Clinton'],['sanders','Sanders']]
+    const contenders = this.state.contenders
     let array = contenders.map( (candidate, x) => {
       let lower = candidate[0]
       return <th key={x} style={::this._thState(lower)}  id={lower} onClick={::this._sort}>{candidate[1]}</th>
     })
     return array
+  }
+
+  _total() {
+    const contenders = this.state.contenders
+    const total = {clinton: 0, sanders:0}
+    let delegates = this.props.delegates
+    for(var state in delegates){
+      total.clinton += delegates[state].candidates.clinton
+      total.sanders += delegates[state].candidates.sanders
+    }
+    return (
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>{total.clinton}</td>
+        <td>{total.sanders}</td>
+      </tr>
+    )
   }
 
   render() {
@@ -88,6 +109,7 @@ class Democrat extends React.Component{
             </tr>
           </thead>
           <tbody>
+            {::this._total()}
             {::this._rows()}
           </tbody>
         </table>
