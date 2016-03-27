@@ -6,23 +6,9 @@ class StateRow extends React.Component{
     super(props)
   }
 
-  _trump(e) {
-    ::this._update('trump', e.target.value)
-  }
-
-  _rubio(e) {
-    ::this._update('rubio', e.target.value)
-  }
-
-  _cruz(e) {
-    ::this._update('cruz', e.target.value)
-  }
-
-  _kasich(e) {
-    ::this._update('kasich', e.target.value)
-  }
-
-  _update(candidate, vote) {
+  _update(e) {
+    let vote = e.target.value
+    let candidate = e.target.id
     let state = this.props.data.state;
     this.props.dispatch({type:'SET_EDIT', state, candidate})
   }
@@ -43,7 +29,7 @@ class StateRow extends React.Component{
 
   _cruzInput(data, settings, dispatch) {
     if(data.state === settings.state && settings.candidate === 'cruz'){
-      return <Input count={data.candidates.cruz} dispatch={dispatch} candidate='cruz' state={data.state}/>
+      return
     }
     return data.candidates.cruz
   }
@@ -67,6 +53,28 @@ class StateRow extends React.Component{
     }
   }
 
+  _cols() {
+    let array = [];
+    let { data, contenders, settings, dispatch } = this.props;
+    for(var i = 0; i < contenders.length; i++){
+      let contender = contenders[i][0];
+      if( data.state === settings.state && settings.candidate === contender ){
+        array.push(
+          <td key={contender}>
+            <Input count={data.candidates[contender]} dispatch={dispatch} candidate={contender} state={data.state}/>
+          </td>
+        );
+      } else {
+        array.push(
+          <td key={contender} id={contender} onClick={::this._update}>
+            {data.candidates[contender]}
+          </td>
+        );
+      }
+    }
+    return array
+  }
+
   render() {
     let { data, settings, dispatch } = this.props
     let candidates = data.candidates;
@@ -76,10 +84,7 @@ class StateRow extends React.Component{
         <td>{data.date.toLocaleDateString()}</td>
         <td>{data.delegates}</td>
         <td>{data.class}</td>
-        <td onClick={::this._trump}>{::this._trumpInput(data, settings, dispatch)}</td>
-        <td onClick={::this._rubio}>{::this._rubioInput(data, settings, dispatch)}</td>
-        <td onClick={::this._cruz}>{::this._cruzInput(data, settings, dispatch)}</td>
-        <td onClick={::this._kasich}>{::this._kasichInput(data, settings, dispatch)}</td>
+        {::this._cols()}
       </tr>
     )
   }

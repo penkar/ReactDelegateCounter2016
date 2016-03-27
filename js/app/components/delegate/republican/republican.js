@@ -5,7 +5,29 @@ import StateRow from './staterow.js'
 class Repulican extends React.Component{
   constructor(props){
     super(props)
-    this.state = {sort:'date', reverse: false}
+    this.state = {
+      sort:'date',
+      reverse: false,
+      contenders: [['trump','Trump'],['rubio','Rubio'],['kasich','Kasich'],['cruz','Cruz']]
+    }
+  }
+
+  _expander() {
+    if(this.state.contenders.length < 5){
+      return <span style={{float:'right'}} onClick={::this._expand}>More</span>
+    } else {
+      return <span style={{float:'right'}} onClick={::this._expand}>Less</span>
+    }
+  }
+
+  _expand() {
+    if(this.state.contenders.length < 5){
+      return this.setState({
+        contenders:[['trump','Trump'],['rubio','Rubio'],['kasich','Kasich'],['cruz','Cruz'],['bush','Bush'],['carson','Carson'],['fiorina','Fiorina'],['huckabee','Huckabee'],['christie','Christie'],['santorum','Santorum'],['gilmore','Gilmore']]
+      })
+    } else {
+      return this.setState({contenders:[['trump','Trump'],['rubio','Rubio'],['kasich','Kasich'],['cruz','Cruz']]})
+    }
   }
 
   _sort(e) {
@@ -31,20 +53,12 @@ class Repulican extends React.Component{
           return x.state > y.state ? 1 : -1
         case 'date':
           return x.date > y.date ? 1 : -1
-        case 'trump':
-          return (x.candidates.trump > y.candidates.trump) ? 1 : -1
-        case 'rubio':
-          return x.candidates.rubio > y.candidates.rubio ? 1 : -1
-        case 'cruz':
-          return (x.candidates.cruz > y.candidates.cruz) ? 1 : -1
-        case 'kasich':
-          return x.candidates.kasich > y.candidates.kasich ? 1 : -1
         case 'open':
           return x.class > y.class ? 1 : -1
         case 'delegates':
           return x.delegates > y.delegates ? 1 : -1
         default:
-          return 1;
+          return (x.candidates[sort] > y.candidates[sort]) ? 1 : -1;
       }
     })
     return keys
@@ -54,7 +68,7 @@ class Repulican extends React.Component{
     const array = [], states = ::this._sorter();
     for( let val in states){
       let state = states[val];
-      array.push(<StateRow data={state} key={state.state} dispatch={this.props.dispatch} settings={this.props.settings}/>)
+      array.push(<StateRow data={state} key={state.state} dispatch={this.props.dispatch} settings={this.props.settings} contenders={this.state.contenders}/>)
     }
     return array;
   }
@@ -67,7 +81,7 @@ class Repulican extends React.Component{
   }
 
   _headers() {
-    const contenders = [['trump','Trump'],['rubio','Rubio'],['cruz','Cruz'],['kasich','Kasich']]
+    let contenders = this.state.contenders
     let array = contenders.map( (candidate, x) => {
       let lower = candidate[0]
       return <th key={x} style={::this._thState(lower)}  id={lower} onClick={::this._sort}>{candidate[1]}</th>
@@ -78,6 +92,9 @@ class Repulican extends React.Component{
   render() {
     return (
       <div>
+        <div>
+          {::this._expander()}
+        </div>
         <table className="pure-table" style={{margin:'auto'}}>
           <thead>
             <tr style={{cursor:'pointer'}}>

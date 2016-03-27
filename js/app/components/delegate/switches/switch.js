@@ -27,7 +27,7 @@ class Switch extends React.Component{
   }
 
   _styleR(bool) {
-    if(bool){console.log('aaa')
+    if(bool){
       return {backgroundColor:'rgba(202,60,60,0.5)'}
     } else {
       return {backgroundColor:'rgba(202,60,60,1.0)'}
